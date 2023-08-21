@@ -1,30 +1,103 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="./css/desktop.css" />
-        <link rel="stylesheet" type="text/css" href="./css/compiled.css" />
-    </head>
 
-    <body>
-        <div id="container">
-            <div id="letters">AB</div>
-            <div id="box-1">
-                <div id="title">Introduction</div>
-                <div id="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum, a congue libero lacinia sit amet. Pellentesque egestas.
-                </div>
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/desktop.css" /> -->
+    <script type="application/javascript">
+        const mode = 'desktop'
+        if(mode == 'desktop') {
+            var link = document.createElement('link')
+            link.rel = 'stylesheet'
+            link.type = 'text/css'
+            link.href = './css/desktop.css'
+            document.head.appendChild(link)
+        }
+        if(mode == 'mobile') {
+            var link = document.createElement('link')
+            link.rel = 'stylesheet'
+            link.type = 'text/css'
+            link.href = './css/mobile.css'
+            document.head.appendChild(link)
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="./css/compiled.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="letters">AB</div>
+        <div id="box-1">
+            <div id="title">Introduction</div>
+            <div id="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum, a congue libero
+                lacinia sit amet.
             </div>
-            <div id="box-2"></div>
-            <div id="box-3"></div>
-            <div id="cta-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum, a congue.
-            </div>
-            <div id="cta-link"></div>
-            <div id="cta-link-text">Click here</div>
         </div>
+        <div id="box-2"></div>
+        <div id="box-3"></div>
+        <div id="cta-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum, a congue.
+        </div>
+        <div id="cta-link"></div>
+        <div id="cta-link-text">Click here</div>
+    </div>
 
-        <script src="./js/index.js"></script>
-    </body>
+    <script src="./js/index.js"></script>
+    <script type="application/javascript">
+        const desktopConfig = {
+            id: 'container',
+            width: 1804,
+            height: 1000,
+            elements: {
+                all: [
+                    'box-1',
+                    'box-2',
+                    'box-3',
+                    'letters',
+                    'title',
+                    'description',
+                    'cta-text',
+                    'cta-link',
+                    'cta-link-text'
+                ],
+                text: [
+                    'letters',
+                    'title',
+                    'description',
+                    'cta-text',
+                    'cta-link-text'
+                ]
+            }
+        }
+        const mobileConfig = {
+            id: 'container',
+            width: 378,
+            height: 974,
+            elements: {
+                all: [
+                    'box-1',
+                    'box-2',
+                    'box-3',
+                    'letters',
+                    'title',
+                    'description',
+                    'cta-text',
+                    'cta-link',
+                    'cta-link-text'
+                ],
+                text: [
+                    'letters',
+                    'title',
+                    'description',
+                    'cta-text',
+                    'cta-link-text'
+                ]
+            }
+        }
+        if(mode == 'desktop') { scaleElements(desktopConfig) }
+        if(mode == 'mobile') { scaleElements(mobileConfig) }
+    </script>
+</body>
 
 </html>

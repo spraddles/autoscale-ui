@@ -3,6 +3,11 @@
     display: block;
 }
 
+script {
+    display: none;
+    visibility: hidden;
+}
+
 @font-face {
     font-display: swap;
     font-family: 'Agrandir Variable';
