@@ -4,11 +4,6 @@
     "version": "0.1",
     "description": "Auto scale elements in relation to each other",
     "private": true,
-    "scripts": {
-        "compile-sass": "node ./src/compile-sass.js"
-    },
-    "devDependencies": {
-        "sass": "^1.54.5"
-    },
+    "scripts": {},
     "type": "module"
 }
