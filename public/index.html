@@ -3,24 +3,7 @@
 <html lang="en">
 
 <head>
-    <!-- <link rel="stylesheet" type="text/css" href="./css/desktop.css" /> -->
-    <script type="application/javascript">
-        const mode = 'desktop'
-        if(mode == 'desktop') {
-            var link = document.createElement('link')
-            link.rel = 'stylesheet'
-            link.type = 'text/css'
-            link.href = './css/desktop.css'
-            document.head.appendChild(link)
-        }
-        if(mode == 'mobile') {
-            var link = document.createElement('link')
-            link.rel = 'stylesheet'
-            link.type = 'text/css'
-            link.href = './css/mobile.css'
-            document.head.appendChild(link)
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/compiled.css" />
 </head>
 
@@ -45,10 +28,8 @@
 
     <script src="./js/index.js"></script>
     <script type="application/javascript">
-        const desktopConfig = {
+        const config = {
             id: 'container',
-            width: 1804,
-            height: 1000,
             elements: {
                 all: [
                     'box-1',
@@ -70,33 +51,7 @@
                 ]
             }
         }
-        const mobileConfig = {
-            id: 'container',
-            width: 378,
-            height: 974,
-            elements: {
-                all: [
-                    'box-1',
-                    'box-2',
-                    'box-3',
-                    'letters',
-                    'title',
-                    'description',
-                    'cta-text',
-                    'cta-link',
-                    'cta-link-text'
-                ],
-                text: [
-                    'letters',
-                    'title',
-                    'description',
-                    'cta-text',
-                    'cta-link-text'
-                ]
-            }
-        }
-        if(mode == 'desktop') { scaleElements(desktopConfig) }
-        if(mode == 'mobile') { scaleElements(mobileConfig) }
+        scaleElements(config)
     </script>
 </body>
 

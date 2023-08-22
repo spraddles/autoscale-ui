@@ -2,9 +2,7 @@ const scaleElements = (config) => {
 
     // base container dimensions
     const baseContainer = {
-        id: config.id,
-        width: config.width,
-        height: config.height
+        id: config.id
     }
     var dynamicContainerWidth = null
     var dynamicContainerHeight = null
@@ -17,7 +15,7 @@ const scaleElements = (config) => {
         const containerElement = document.getElementById(baseContainer.id)
         dynamicContainerWidth = screenWidth
         dynamicContainerHeight = screenHeight
-        dynamicContainerRatio = (dynamicContainerWidth / baseContainer.width)
+        dynamicContainerRatio = (dynamicContainerWidth / containerElement.offsetWidth)
         containerElement.style.width = dynamicContainerWidth + 'px'
         containerElement.style.height = dynamicContainerHeight + 'px'
     }
