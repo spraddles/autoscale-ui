@@ -1,51 +1,114 @@
-const scaleElements = (config) => {
+function scaleElements(config) {
 
-    // base container dimensions
-    const baseContainer = {
-        id: config.id
-    }
-    var dynamicContainerWidth = null
-    var dynamicContainerHeight = null
-    var dynamicContainerRatio = null
+    let dynamicContainerWidth = 0
+    let dynamicContainerHeight = 0
+    let dynamicContainerRatio = 0
 
-    // set container
-    const setContainerDimensions = () => {
-        const screenWidth = window.innerWidth
-        const screenHeight = window.innerHeight
-        const containerElement = document.getElementById(baseContainer.id)
-        dynamicContainerWidth = screenWidth
-        dynamicContainerHeight = screenHeight
-        dynamicContainerRatio = (dynamicContainerWidth / containerElement.offsetWidth)
-        containerElement.style.width = dynamicContainerWidth + 'px'
-        containerElement.style.height = dynamicContainerHeight + 'px'
+    const containerElement = document.getElementById(config.id)
+
+    const setContainerProps = () => {
+        dynamicContainerWidth = window.innerWidth - config.gutter * 2
+        if (containerElement) {
+            dynamicContainerRatio = dynamicContainerWidth / containerElement.offsetWidth
+            containerElement.style.width = dynamicContainerWidth + 'px'
+            dynamicContainerHeight = containerElement.offsetHeight * dynamicContainerRatio
+            containerElement.style.height = dynamicContainerHeight + 'px'
+            containerElement.style.position = 'relative'
+            containerElement.style.marginLeft = config.gutter + 'px'
+        }
     }
 
-    // resize other elements respectively
-    const resizeElements = () => {
+    const separateSelectors = () => {
         const allElementsArray = config.elements.all
-        const textElementsArray = config.elements.text
-        // all elements need 'width, height, top, left' values
-        allElementsArray.forEach((element, index) => {
-            const theElement = document.getElementById(element)
-            theElement.style.width = dynamicContainerRatio * theElement.offsetWidth + 'px'
-            theElement.style.height = dynamicContainerRatio * theElement.offsetHeight + 'px'
-            theElement.style.top = dynamicContainerRatio * theElement.offsetTop + 'px'
-            theElement.style.left = dynamicContainerRatio * theElement.offsetLeft + 'px'
+        allElementsArray.forEach((element) => {
+            // id's
+            if (element.startsWith('#')) {
+                const htmlElement = document.getElementById(element.replace('#', ''))
+                if (htmlElement) {
+                    applyAllStyling(htmlElement)
+                }
+            }
+            // classes
+            if (element.startsWith('.')) {
+                const htmlElements = document.querySelectorAll(element)
+                htmlElements.forEach((htmlElement) => {
+                    applyAllStyling(htmlElement)
+                })
+            }
         })
-        // text elements need 'font size' changes
-        textElementsArray.forEach((element, index) => {
-            const someElement = document.getElementById(element)
-            const fontSizeRaw = window.getComputedStyle(someElement).fontSize
-            const fontSize = fontSizeRaw.replace('px','')
-            someElement.style.fontSize = dynamicContainerRatio * fontSize + 'px'
+
+        const textElementsArray = config.elements.text
+        textElementsArray.forEach((element) => {
+            if (element.startsWith('#')) {
+                const htmlElement = document.getElementById(element.replace('#', ''))
+                if (htmlElement) {
+                    applyTextStyling(htmlElement)
+                }
+            }
+            if (element.startsWith('.')) {
+                const htmlElements = document.querySelectorAll(element)
+                htmlElements.forEach((htmlElement) => {
+                    applyTextStyling(htmlElement)
+                })
+            }
         })
     }
 
-    setContainerDimensions()
-    resizeElements()
+    const applyAllStyling = (element) => {
+        element.style.width = dynamicContainerRatio * element.offsetWidth + 'px'
+        element.style.height = dynamicContainerRatio * element.offsetHeight + 'px'
+        element.style.top = dynamicContainerRatio * element.offsetTop + 'px'
+        element.style.left = dynamicContainerRatio * element.offsetLeft + 'px'
+        element.style.marginLeft =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).marginLeft.replace('px', '')) +
+            'px'
+        element.style.marginRight =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).marginRight.replace('px', '')) +
+            'px'
+        element.style.marginTop =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).marginTop.replace('px', '')) +
+            'px'
+        element.style.marginBottom =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).marginBottom.replace('px', '')) +
+            'px'
+        element.style.paddingLeft =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).paddingLeft.replace('px', '')) +
+            'px'
+        element.style.paddingRight =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).paddingRight.replace('px', '')) +
+            'px'
+        element.style.paddingTop =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).paddingTop.replace('px', '')) +
+            'px'
+        element.style.paddingBottom =
+            dynamicContainerRatio *
+            parseFloat(window.getComputedStyle(element).paddingBottom.replace('px', '')) +
+            'px'
+    }
 
-    /* this is recursively breaking the sizing (for some reason):
-    window.addEventListener('resize', setContainerDimensions)
-    window.addEventListener('resize', resizeElements) */
+    const applyTextStyling = (element) => {
+        if (element && dynamicContainerRatio) {
+            const fontSize = parseFloat(window.getComputedStyle(element).fontSize.replace('px', ''))
+            element.style.fontSize = dynamicContainerRatio * fontSize + 'px'
+        }
+    }
 
+    window.addEventListener('load', () => {
+        console.log('load')
+        setContainerProps()
+        separateSelectors()
+    })
+
+    window.addEventListener('resize', () => {
+        console.log('resize')
+        setContainerProps()
+        separateSelectors()
+    })
 }
