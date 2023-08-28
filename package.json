@@ -1,5 +1,5 @@
 {
-    "name": "scale-elements",
+    "name": "autoscale-ui",
     "author": "@spraddles",
     "version": "0.1",
     "description": "Auto scale elements in relation to each other",

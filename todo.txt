@@ -1,0 +1,3 @@
+Tasks:
+- add support for min/max font size scaling
+- add support to auto-scale the font size to fit text within a fixed width & fixed height box
