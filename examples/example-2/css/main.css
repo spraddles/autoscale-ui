@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    display: block;
+}
+
+script {
+    display: none;
+    visibility: hidden;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Agrandir Variable';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../fonts/AgrandirVariable.ttf') format('truetype'),
+        url('./../fonts/AgrandirVariable.woff2') format('woff2'),
+        url('./../fonts/AgrandirVariable.woff') format('woff');
+}
+
+body {
+    font-family: Agrandir Variable, sans-serif;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 1804px;
+    height: 1017px;
+}

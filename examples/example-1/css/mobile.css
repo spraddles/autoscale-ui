@@ -1,51 +1,24 @@
-* {
-    box-sizing: border-box;
-    display: block;
-}
-
-script {
-    display: none;
-    visibility: hidden;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: 'Agrandir Variable';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./../fonts/AgrandirVariable.ttf') format('truetype'),
-        url('./../fonts/AgrandirVariable.woff2') format('woff2'),
-        url('./../fonts/AgrandirVariable.woff') format('woff');
-}
-
-body {
-    font-family: Agrandir Variable, sans-serif;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-}
-
 #container {
     position: absolute;
-    width: 1804px;
-    height: 1000px;
+    width: 378px;
+    height: 974px;
     background-color: #F8F6F4;
 }
 
 #letters {
     /* layout */
     position: absolute;
-    width: 673px;
-    height: 364px;
-    top: 147px;
-    left: 171px;
+    width: 280px;
+    height: 151px;
+    top: 131px;
+    left: 10px;
     /* typography */
     color: #162C63;
     leading-trim: both;
     text-edge: cap;
     font-feature-settings: 'salt' on;
     font-family: Agrandir Variable;
-    font-size: 520px;
+    font-size: 216px;
     font-style: normal;
     font-weight: 469;
     /* line-height: 1; */
@@ -60,21 +33,19 @@ body {
     background-color: #2051FF;
     /* layout */
     position: absolute;
-    width: 596px;
-    height: 596px;
-    top: 237px;
-    left: 306px;
+    width: 378px;
+    height: 378px;
+    top: 183px;
+    left: 0px;
 }
 
 #box-2 {
     /* layout */
     position: absolute;
-    width: 371px;
-    height: 369px;
-    top: 464px;
-    /* adjusted by 1 px */
-    left: 902px;
-    /* adjusted by 1 px */
+    width: 235.3px;
+    height: 234.03px;
+    top: 561px;
+    left: 0px;
     /* colours */
     background-color: #bdaaaa;
 }
@@ -84,12 +55,10 @@ body {
     background-color: #E83D32;
     /* layout */
     position: absolute;
-    width: 226px;
-    height: 226px;
-    top: 464px;
-    /* adjusted by 1 px */
-    left: 1273px;
-    /* adjusted by 1 px */
+    width: 143px;
+    height: 143px;
+    top: 561px;
+    left: 235px;
 }
 
 #title {
@@ -99,31 +68,33 @@ body {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%;
+    line-height: 19.12px;
     letter-spacing: 5.6px;
     text-transform: uppercase;
     /* layout */
     position: absolute;
     width: 250px;
     height: 22px;
-    top: 378px;
-    left: 30px;
+    top: 156px;
+    left: 24px;
 }
 
 #description {
     /* typography */
     color: #FFF;
     font-family: Agrandir Variable;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 336;
-    line-height: 1;
+    /* line-height: 32px; */
     /* layout */
     position: absolute;
-    width: 508px;
-    height: 152px;
-    top: 408px;
-    left: 30px;
+    width: 322.19px;
+    height: 160px;
+    top: 199px;
+    left: 24px;
+    /* overrides */
+    line-height: 1.3;
 }
 
 #cta-text {
@@ -134,13 +105,12 @@ body {
     font-style: normal;
     font-weight: 336;
     line-height: 160%;
-    /* 25.6px */
     /* layout */
     position: absolute;
-    width: 271px;
+    width: 325px;
     height: 78px;
-    top: 751px;
-    left: 1377px;
+    top: 819px;
+    left: 24px;
 }
 
 #cta-link {
@@ -149,8 +119,8 @@ body {
     height: 4px;
     flex-shrink: 0;
     position: absolute;
-    top: 855px;
-    left: 1377px;
+    top: 942px;
+    left: 146px;
     /* style */
     border-radius: 4px;
     background: #E83D32;
@@ -170,6 +140,6 @@ body {
     width: 96px;
     height: 16px;
     position: absolute;
-    top: 851px;
-    left: 1484px;
+    top: 937px;
+    left: 253px;
 }
