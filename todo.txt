@@ -1,4 +1,13 @@
 Tasks:
+- trigger JS on window events not working properly
 - add support for min/max font size scaling
 - add support to auto-scale the font size to fit text within a fixed width & fixed height box
 - add support for 'push' method (up, down, left, right) if text content is is too big for container & runs over: this would push all other surrounding content so that longer text fits / other surrounding elements can accommodate the extra space needed
+
+
+
+Group tasks:
+- fonts
+- images
+- list items
+- boxes (done)

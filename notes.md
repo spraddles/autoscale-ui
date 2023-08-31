@@ -9,3 +9,5 @@ Workflow:
 Bugs / todo:
 - set min & max font sizes (small screens have tiny text, which you can't read)
 - autocalculate 'letter-spacing' for fonts
+- fit text into boxes where text bleeds over container
+
