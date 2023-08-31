@@ -123,10 +123,10 @@ const scaleElements = (config: Config) => {
   }
 
   // run on intial page load
-  if (document.readyState === 'complete') {
+  window.addEventListener('load', () => {
     setContainerProps()
     separateSelectors()
-  }
+  })
 
   // run on each window resize
   window.addEventListener('resize', () => {

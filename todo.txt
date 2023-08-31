@@ -7,7 +7,13 @@ Tasks:
 
 
 Group tasks:
-- fonts
 - images
 - list items
-- boxes (done)
+- fonts
+- boxes
+
+
+
+Notes:
+- example 1: boxes & text
+- example 2: images & text

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="letters">AB</div>
+        <div id="box-1">
+            <div id="title">Introduction</div>
+            <div id="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum.
+            </div>
+        </div>
+        <div id="box-2"></div>
+        <div id="box-3"></div>
+        <div id="cta-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum, a congue.
+        </div>
+        <div id="cta-link"></div>
+        <div id="cta-link-text">Click here</div>
+    </div>
+    <script src="./../../src/scaleElements.js"></script>
+    <script type="application/javascript">
+        const config = {
+            id: 'container',
+            gutter: 40,
+            elements: {
+                all: [
+                    '#box-1',
+                    '#box-2',
+                    '#box-3',
+                    '#letters',
+                    '#title',
+                    '#description',
+                    '#cta-text',
+                    '#cta-link',
+                    '#cta-link-text'
+                ],
+                text: [
+                    '#letters',
+                    '#title',
+                    '#description',
+                    '#cta-text',
+                    '#cta-link-text'
+                ]
+            }
+        }
+        scaleElements(config)
+    </script>
+</body>
+
+</html>
