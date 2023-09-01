@@ -1,7 +1,6 @@
 Group tasks:
 
 - JS handling:
-> (done) trigger JS on window load event not working
 > resizing the browser causes elements to offset that cause jank, so elements aren't exactly placed
 
 - fonts / text:
@@ -25,4 +24,4 @@ Notes:
 - example 3: image grid
 
 Usage notes:
-- text elements need a text box container parent
+- text elements need a text box parent

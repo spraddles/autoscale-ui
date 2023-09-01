@@ -14,7 +14,7 @@ var scaleElements = function (config) {
             dynamicContainerHeight = containerElement.offsetHeight * dynamicContainerRatio;
             containerElement.style.height = dynamicContainerHeight + 'px';
             // other
-            containerElement.style.position = 'relative';
+            containerElement.style.position = 'absolute';
             containerElement.style.marginLeft = config.gutter + 'px';
         }
     };

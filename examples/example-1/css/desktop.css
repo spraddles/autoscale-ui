@@ -1,5 +1,4 @@
 #container {
-    position: absolute;
     width: 1804px;
     height: 1000px;
     background-color: #F8F6F4;
@@ -7,7 +6,6 @@
 
 #letters {
     /* layout */
-    position: absolute;
     width: 673px;
     height: 364px;
     top: 147px;
@@ -32,7 +30,6 @@
 #box-1 {
     background-color: #2051FF;
     /* layout */
-    position: absolute;
     width: 596px;
     height: 596px;
     top: 237px;
@@ -41,7 +38,6 @@
 
 #box-2 {
     /* layout */
-    position: absolute;
     width: 371px;
     height: 369px;
     top: 464px;
@@ -56,7 +52,6 @@
     /* colours */
     background-color: #E83D32;
     /* layout */
-    position: absolute;
     width: 226px;
     height: 226px;
     top: 464px;
@@ -76,7 +71,6 @@
     letter-spacing: 5.6px;
     text-transform: uppercase;
     /* layout */
-    position: absolute;
     width: 250px;
     height: 22px;
     top: 378px;
@@ -92,7 +86,6 @@
     font-weight: 336;
     line-height: 38.4px;
     /* layout */
-    position: absolute;
     width: 508px;
     height: 152px;
     top: 408px;
@@ -109,7 +102,6 @@
     line-height: 160%;
     /* 25.6px */
     /* layout */
-    position: absolute;
     width: 271px;
     height: 78px;
     top: 751px;
@@ -121,7 +113,6 @@
     width: 81px;
     height: 4px;
     flex-shrink: 0;
-    position: absolute;
     top: 855px;
     left: 1377px;
     /* style */
@@ -142,7 +133,6 @@
     /* layout */
     width: 96px;
     height: 16px;
-    position: absolute;
     top: 851px;
     left: 1484px;
 }
