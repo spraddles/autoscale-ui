@@ -35,17 +35,14 @@ const scaleElements = (config: Config) => {
 
     // non-text elements
     const nonTextElementsArray = config.elements.all
-
     nonTextElementsArray.forEach((element) => {
-      // selector is an ID
-      if (element.startsWith('#')) {
+      if (element.startsWith('#')) { // selector is an ID
         const htmlElement = document.getElementById(element.replace('#', ''))
         if (htmlElement) {
           applyNonTextElementStyling(htmlElement as HTMLElement)
         }
       }
-      // selector is a class
-      if (element.startsWith('.')) {
+      if (element.startsWith('.')) { // selector is a class
         const htmlElements = document.querySelectorAll(element)
         htmlElements.forEach((htmlElement) => {
           applyNonTextElementStyling(htmlElement as HTMLElement)
@@ -53,18 +50,16 @@ const scaleElements = (config: Config) => {
       }
     })
 
-    // text elements only
+    // text elements
     const textElementsArray = config.elements.text
     textElementsArray.forEach((element) => {
-      // selector is an ID
-      if (element.startsWith('#')) {
+      if (element.startsWith('#')) { // selector is an ID
         const htmlElement = document.getElementById(element.replace('#', ''))
         if (htmlElement) {
           applyTextStyling(htmlElement as HTMLElement)
         }
       }
-      // selector is a class
-      if (element.startsWith('.')) {
+      if (element.startsWith('.')) { // selector is a class
         const htmlElements = document.querySelectorAll(element)
         htmlElements.forEach((htmlElement) => {
           applyTextStyling(htmlElement as HTMLElement)
@@ -72,18 +67,16 @@ const scaleElements = (config: Config) => {
       }
     })
 
-    // image elements only
+    // image elements
     const imageElementsArray = config.elements.images
     imageElementsArray.forEach((element) => {
-      // selector is an ID
-      if (element.startsWith('#')) {
+      if (element.startsWith('#')) { // selector is an ID
         const htmlElement = document.getElementById(element.replace('#', ''))
         if (htmlElement) {
           applyImageStyling(htmlElement as HTMLElement)
         }
       }
-      // selector is a class
-      if (element.startsWith('.')) {
+      if (element.startsWith('.')) { // selector is a class
         const htmlElements = document.querySelectorAll(element)
         htmlElements.forEach((htmlElement) => {
           applyImageStyling(htmlElement as HTMLElement)
@@ -136,7 +129,7 @@ const scaleElements = (config: Config) => {
       'px'
   }
 
-  // apply styling to text elements only
+  // apply styling to text elements
   const applyTextStyling = (element: HTMLElement) => {
     if (element && dynamicContainerRatio) {
       // position
@@ -150,7 +143,7 @@ const scaleElements = (config: Config) => {
     }
   }
 
-  // apply styling to image elements only
+  // apply styling to image elements
   const applyImageStyling = (element: HTMLElement) => {
     if (element && dynamicContainerRatio) {
       // position
@@ -161,7 +154,7 @@ const scaleElements = (config: Config) => {
     }
   }
 
-  // run on intial page load
+  // run on initial page load
   window.onload = function() {
     console.log('onload')
     setContainerProps()
