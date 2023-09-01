@@ -1,0 +1,26 @@
+#container {
+    width: 1804px;
+    height: 699.2px;
+    background: #EFEBE5;
+}
+
+#text-box {
+    /* position */
+    top: 58px;
+    left: 654px;
+    width: 496px;
+    height: 22px;
+}
+
+#text {
+    /* typography */
+    font-family: Avenir;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.4em;
+    text-align: center;
+    color:  #162C63;
+}
+
+

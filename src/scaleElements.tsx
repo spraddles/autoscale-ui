@@ -4,6 +4,7 @@ interface Config {
   elements: {
     all: string[]
     text: string[]
+    images: string[]
   }
 }
 
@@ -31,21 +32,23 @@ const scaleElements = (config: Config) => {
 
   // check for selector type
   const separateSelectors = () => {
-    // all elements
-    const allElementsArray = config.elements.all
-    allElementsArray.forEach((element) => {
+
+    // non-text elements
+    const nonTextElementsArray = config.elements.all
+
+    nonTextElementsArray.forEach((element) => {
       // selector is an ID
       if (element.startsWith('#')) {
         const htmlElement = document.getElementById(element.replace('#', ''))
         if (htmlElement) {
-          applyAllStyling(htmlElement as HTMLElement)
+          applyNonTextElementStyling(htmlElement as HTMLElement)
         }
       }
       // selector is a class
       if (element.startsWith('.')) {
-        const htmlElements = document.querySelectorAll('.toggle')
+        const htmlElements = document.querySelectorAll(element)
         htmlElements.forEach((htmlElement) => {
-          applyAllStyling(htmlElement as HTMLElement)
+          applyNonTextElementStyling(htmlElement as HTMLElement)
         })
       }
     })
@@ -57,24 +60,44 @@ const scaleElements = (config: Config) => {
       if (element.startsWith('#')) {
         const htmlElement = document.getElementById(element.replace('#', ''))
         if (htmlElement) {
-          applyTextStyling(htmlElement)
+          applyTextStyling(htmlElement as HTMLElement)
         }
       }
       // selector is a class
       if (element.startsWith('.')) {
-        const htmlElements = document.querySelectorAll('.toggle')
+        const htmlElements = document.querySelectorAll(element)
         htmlElements.forEach((htmlElement) => {
           applyTextStyling(htmlElement as HTMLElement)
         })
       }
     })
+
+    // image elements only
+    const imageElementsArray = config.elements.images
+    imageElementsArray.forEach((element) => {
+      // selector is an ID
+      if (element.startsWith('#')) {
+        const htmlElement = document.getElementById(element.replace('#', ''))
+        if (htmlElement) {
+          applyImageStyling(htmlElement as HTMLElement)
+        }
+      }
+      // selector is a class
+      if (element.startsWith('.')) {
+        const htmlElements = document.querySelectorAll(element)
+        htmlElements.forEach((htmlElement) => {
+          applyImageStyling(htmlElement as HTMLElement)
+        })
+      }
+    })
   }
 
-  // apply styling to all elements
-  const applyAllStyling = (element: HTMLElement) => {
+  // apply styling to non-text elements
+  const applyNonTextElementStyling = (element: HTMLElement) => {
     element.style.width = dynamicContainerRatio * element.offsetWidth + 'px'
     element.style.height = dynamicContainerRatio * element.offsetHeight + 'px'
     // position
+    element.style.position = 'absolute'
     element.style.top = dynamicContainerRatio * element.offsetTop + 'px'
     element.style.left = dynamicContainerRatio * element.offsetLeft + 'px'
     // margins
@@ -116,21 +139,39 @@ const scaleElements = (config: Config) => {
   // apply styling to text elements only
   const applyTextStyling = (element: HTMLElement) => {
     if (element && dynamicContainerRatio) {
+      // position
+      element.style.position = 'absolute'
       // font size
       const fontSize = parseFloat(window.getComputedStyle(element).fontSize.replace('px', ''))
       element.style.fontSize = dynamicContainerRatio * fontSize + 'px'
+      // line height
+      const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight.replace('px', ''))
+      element.style.lineHeight = dynamicContainerRatio * lineHeight + 'px'
+    }
+  }
+
+  // apply styling to image elements only
+  const applyImageStyling = (element: HTMLElement) => {
+    if (element && dynamicContainerRatio) {
+      // position
+      element.style.position = 'absolute'
+      element.style.backgroundSize = 'cover'
+      element.style.backgroundRepeat = 'no-repeat'
+      element.style.backgroundPosition = 'center center'
     }
   }
 
   // run on intial page load
-  window.addEventListener('load', () => {
+  window.onload = function() {
+    console.log('onload')
     setContainerProps()
     separateSelectors()
-  })
+  }
 
   // run on each window resize
-  window.addEventListener('resize', () => {
+  window.onresize = function() {
+    console.log('onresize')
     setContainerProps()
     separateSelectors()
-  })
+  }
 }

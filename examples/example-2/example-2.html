@@ -8,47 +8,37 @@
 
 <body>
     <div id="container">
-        <div class="introduction">
-            <img class="human-DIRTDC" src="img/human-DIRTDC-3.png" />
-            <div class="frame">
-                <p class="for-us-it-s-all">
-                    For us, it’s all about impact. <br /><br />We&#39;ve built large scale complex government websites,
-                    transformed employee platforms and created digital products used by millions of people across the
-                    globe.<br /><br />We’ve
-                    got you covered from ecosystem mapping, solution design, digital strategy through to end-to-end
-                    design,
-                    content and technical delivery.
-                </p>
-                <div class="div">
-                    <div class="text-wrapper">Learn about us</div>
-                    <div class="rectangle"></div>
-                </div>
-            </div>
+        <div id="image"></div>
+        <div id="text-container">
+            <p class="text">
+                For us, it’s all about impact.
+            </p>
+            <p class="text">
+                We've built large scale complex government websites, transformed employee platforms and created digital products used by millions of people across the globe.
+            </p>
+            <p class="text">
+                We’ve got you covered from ecosystem mapping, solution design, digital strategy through to end-to-end design, content and technical delivery.
+            </p>
         </div>
     </div>
     <script src="./../../src/scaleElements.js"></script>
     <script type="application/javascript">
         const config = {
             id: 'container',
-            gutter: 40,
+            gutter: 0,
             elements: {
-                all: [
-                    '#box-1',
-                    '#box-2',
-                    '#box-3',
-                    '#letters',
-                    '#title',
-                    '#description',
-                    '#cta-text',
-                    '#cta-link',
-                    '#cta-link-text'
+                // all but not text
+                all: [ 
+                    '#image',
+                    '#text-container'
                 ],
+                // text only
                 text: [
-                    '#letters',
-                    '#title',
-                    '#description',
-                    '#cta-text',
-                    '#cta-link-text'
+                    '.text'
+                ],
+                // images only
+                images: [
+                    '#image'
                 ]
             }
         }

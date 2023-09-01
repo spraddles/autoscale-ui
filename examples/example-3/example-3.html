@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="text-box">
+            <div id="text">Here’s some that put their trust in us</div>
+        </div>
+    </div>
+    <script src="./../../src/scaleElements.js"></script>
+    <script type="application/javascript">
+        const config = {
+            id: 'container',
+            gutter: 0,
+            elements: {
+                // all but not text
+                all: [ 
+                    '#text-box'
+                ],
+                // text only
+                text: [
+                    '#text'
+                ],
+                // images only
+                images: [
+
+                ]
+            }
+        }
+        scaleElements(config)
+    </script>
+</body>
+
+</html>

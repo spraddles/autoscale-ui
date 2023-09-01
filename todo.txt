@@ -1,19 +1,28 @@
-Tasks:
-- trigger JS on window events not working properly
-- add support for min/max font size scaling
-- add support to auto-scale the font size to fit text within a fixed width & fixed height box
-- add support for 'push' method (up, down, left, right) if text content is is too big for container & runs over: this would push all other surrounding content so that longer text fits / other surrounding elements can accommodate the extra space needed
-
-
-
 Group tasks:
-- images
-- list items
-- fonts
-- boxes
 
+- JS handling:
+> (done) trigger JS on window load event not working
+> resizing the browser causes elements to offset that cause jank, so elements aren't exactly placed
+
+- fonts / text:
+> (done) line height issues on scaling
+> add support for min/max font size scaling
+> convert Figma's "Vertical trim Cap height" into CSS
+
+- boxes
+> add support to auto-scale the font size to fit text within a fixed width & fixed height box
+> add support for 'push' method (up, down, left, right) if text content is is too big for container & runs over: this would push all other surrounding content so that longer text fits / other surrounding elements can accommodate the extra space needed
+
+- images
+> (done) need to auto add in some CSS props as Figma does not export this
+
+- list items
 
 
 Notes:
-- example 1: boxes & text
+- example 1: boxes & text (no images)
 - example 2: images & text
+- example 3: image grid
+
+Usage notes:
+- text elements need a text box container parent

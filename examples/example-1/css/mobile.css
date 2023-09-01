@@ -14,19 +14,17 @@
     left: 10px;
     /* typography */
     color: #162C63;
-    leading-trim: both;
-    text-edge: cap;
     font-feature-settings: 'salt' on;
     font-family: Agrandir Variable;
     font-size: 216px;
     font-style: normal;
     font-weight: 469;
-    /* line-height: 1; */
+    /* line-height: 60.665px; */
     text-transform: uppercase;
     /* other */
     z-index: 1;
     /* overrides */
-    line-height: 0.9;
+    line-height: 0.8;
 }
 
 #box-1 {

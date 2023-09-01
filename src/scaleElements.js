@@ -20,21 +20,21 @@ var scaleElements = function (config) {
     };
     // check for selector type
     var separateSelectors = function () {
-        // all elements
-        var allElementsArray = config.elements.all;
-        allElementsArray.forEach(function (element) {
+        // non-text elements
+        var nonTextElementsArray = config.elements.all;
+        nonTextElementsArray.forEach(function (element) {
             // selector is an ID
             if (element.startsWith('#')) {
                 var htmlElement = document.getElementById(element.replace('#', ''));
                 if (htmlElement) {
-                    applyAllStyling(htmlElement);
+                    applyNonTextElementStyling(htmlElement);
                 }
             }
             // selector is a class
             if (element.startsWith('.')) {
-                var htmlElements = document.querySelectorAll('.toggle');
+                var htmlElements = document.querySelectorAll(element);
                 htmlElements.forEach(function (htmlElement) {
-                    applyAllStyling(htmlElement);
+                    applyNonTextElementStyling(htmlElement);
                 });
             }
         });
@@ -50,18 +50,37 @@ var scaleElements = function (config) {
             }
             // selector is a class
             if (element.startsWith('.')) {
-                var htmlElements = document.querySelectorAll('.toggle');
+                var htmlElements = document.querySelectorAll(element);
                 htmlElements.forEach(function (htmlElement) {
                     applyTextStyling(htmlElement);
                 });
             }
         });
+        // image elements only
+        var imageElementsArray = config.elements.images;
+        imageElementsArray.forEach(function (element) {
+            // selector is an ID
+            if (element.startsWith('#')) {
+                var htmlElement = document.getElementById(element.replace('#', ''));
+                if (htmlElement) {
+                    applyImageStyling(htmlElement);
+                }
+            }
+            // selector is a class
+            if (element.startsWith('.')) {
+                var htmlElements = document.querySelectorAll(element);
+                htmlElements.forEach(function (htmlElement) {
+                    applyImageStyling(htmlElement);
+                });
+            }
+        });
     };
-    // apply styling to all elements
-    var applyAllStyling = function (element) {
+    // apply styling to non-text elements
+    var applyNonTextElementStyling = function (element) {
         element.style.width = dynamicContainerRatio * element.offsetWidth + 'px';
         element.style.height = dynamicContainerRatio * element.offsetHeight + 'px';
         // position
+        element.style.position = 'absolute';
         element.style.top = dynamicContainerRatio * element.offsetTop + 'px';
         element.style.left = dynamicContainerRatio * element.offsetLeft + 'px';
         // margins
@@ -102,19 +121,36 @@ var scaleElements = function (config) {
     // apply styling to text elements only
     var applyTextStyling = function (element) {
         if (element && dynamicContainerRatio) {
+            // position
+            element.style.position = 'absolute';
             // font size
             var fontSize = parseFloat(window.getComputedStyle(element).fontSize.replace('px', ''));
             element.style.fontSize = dynamicContainerRatio * fontSize + 'px';
+            // line height
+            var lineHeight = parseFloat(window.getComputedStyle(element).lineHeight.replace('px', ''));
+            element.style.lineHeight = dynamicContainerRatio * lineHeight + 'px';
+        }
+    };
+    // apply styling to image elements only
+    var applyImageStyling = function (element) {
+        if (element && dynamicContainerRatio) {
+            // position
+            element.style.position = 'absolute';
+            element.style.backgroundSize = 'cover';
+            element.style.backgroundRepeat = 'no-repeat';
+            element.style.backgroundPosition = 'center center';
         }
     };
     // run on intial page load
-    if (document.readyState === 'complete') {
+    window.onload = function () {
+        console.log('onload');
         setContainerProps();
         separateSelectors();
-    }
+    };
     // run on each window resize
-    window.addEventListener('resize', function () {
+    window.onresize = function () {
+        console.log('onresize');
         setContainerProps();
         separateSelectors();
-    });
+    };
 };
