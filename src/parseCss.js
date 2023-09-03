@@ -33,7 +33,7 @@ folders.forEach((folder, folderIndex) => {
                     // set var
                     const properties = [ 'top', 'left', 'width', 'height' ]
                     if(declaration.type == 'declaration' && properties.includes(declaration.property) && !isContainer) {
-                        declaration.value = `calc(${declaration.value} * var(--dynamicContainerRatio))`
+                        declaration.value = `calc(${declaration.value} * var(--ratio))`
                     }
 
                 })

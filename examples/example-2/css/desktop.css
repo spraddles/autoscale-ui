@@ -6,19 +6,19 @@
 }
 
 #image {
-  width: calc(859px * var(--dynamicContainerRatio));
-  height: calc(871px * var(--dynamicContainerRatio));
-  top: calc(139px * var(--dynamicContainerRatio));
-  left: calc(122px * var(--dynamicContainerRatio));
+  width: calc(859px * var(--ratio));
+  height: calc(871px * var(--ratio));
+  top: calc(139px * var(--ratio));
+  left: calc(122px * var(--ratio));
   background-image: url('./../images/image-1.png');
   position: absolute;
 }
 
 #text-container {
-  width: calc(577px * var(--dynamicContainerRatio));
-  height: calc(558px * var(--dynamicContainerRatio));
-  top: calc(226px * var(--dynamicContainerRatio));
-  left: calc(1072px * var(--dynamicContainerRatio));
+  width: calc(577px * var(--ratio));
+  height: calc(558px * var(--ratio));
+  top: calc(226px * var(--ratio));
+  left: calc(1072px * var(--ratio));
   position: absolute;
 }
 

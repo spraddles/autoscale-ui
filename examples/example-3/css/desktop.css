@@ -7,10 +7,10 @@
 
 #text-box {
   /* position */
-  top: calc(58px * var(--dynamicContainerRatio));
-  left: calc(654px * var(--dynamicContainerRatio));
-  width: calc(496px * var(--dynamicContainerRatio));
-  height: calc(22px * var(--dynamicContainerRatio));
+  top: calc(58px * var(--ratio));
+  left: calc(654px * var(--ratio));
+  width: calc(496px * var(--ratio));
+  height: calc(22px * var(--ratio));
   position: absolute;
 }
 
