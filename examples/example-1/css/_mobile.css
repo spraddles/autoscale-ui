@@ -1,0 +1,133 @@
+#container {
+    width: 378px;
+    height: 974px;
+    background-color: #F8F6F4;
+}
+
+#letters {
+    /* layout */
+    width: 280px;
+    height: 151px;
+    top: 131px;
+    left: 10px;
+    /* typography */
+    color: #162C63;
+    font-feature-settings: 'salt' on;
+    font-family: Agrandir Variable;
+    font-size: 216px;
+    font-style: normal;
+    font-weight: 469;
+    /* line-height: 60.665px; */
+    text-transform: uppercase;
+    /* other */
+    z-index: 1;
+    /* overrides */
+    line-height: 0.8;
+}
+
+#box-1 {
+    background-color: #2051FF;
+    /* layout */
+    width: 378px;
+    height: 378px;
+    top: 183px;
+    left: 0px;
+}
+
+#box-2 {
+    /* layout */
+    width: 235.3px;
+    height: 234.03px;
+    top: 561px;
+    left: 0px;
+    /* colours */
+    background-color: #bdaaaa;
+}
+
+#box-3 {
+    /* colours */
+    background-color: #E83D32;
+    /* layout */
+    width: 143px;
+    height: 143px;
+    top: 561px;
+    left: 235px;
+}
+
+#title {
+    /* typography */
+    color: #FFF;
+    font-family: Agrandir Variable;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.12px;
+    letter-spacing: 5.6px;
+    text-transform: uppercase;
+    /* layout */
+    width: 250px;
+    height: 22px;
+    top: 156px;
+    left: 24px;
+}
+
+#description {
+    /* typography */
+    color: #FFF;
+    font-family: Agrandir Variable;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 336;
+    /* line-height: 32px; */
+    /* layout */
+    width: 322.19px;
+    height: 160px;
+    top: 199px;
+    left: 24px;
+    /* overrides */
+    line-height: 1.3;
+}
+
+#cta-text {
+    /* typography */
+    color: #162C63;
+    font-family: Agrandir Variable;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 336;
+    line-height: 160%;
+    /* layout */
+    width: 325px;
+    height: 78px;
+    top: 819px;
+    left: 24px;
+}
+
+#cta-link {
+    /* layout */
+    width: 81px;
+    height: 4px;
+    flex-shrink: 0;
+    top: 942px;
+    left: 146px;
+    /* style */
+    border-radius: 4px;
+    background: #E83D32;
+}
+
+#cta-link-text {
+    /* typography */
+    color: #162C63;
+    font-feature-settings: 'salt' on;
+    font-family: Agrandir Variable;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 336;
+    line-height: 16px;
+    /* 100% */
+    /* layout */
+    width: 96px;
+    height: 16px;
+    top: 937px;
+    left: 253px;
+}

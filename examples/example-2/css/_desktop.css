@@ -1,0 +1,31 @@
+#container {
+    width: 1804px;
+    height: 1017px;
+    background: #EFEBE5;
+}
+
+#image {
+    width: 859px;
+    height: 871px;
+    top: 139px;
+    left: 122px;
+    background-image: url('./../images/image-1.png');
+}
+
+#text-container {
+    width: 577px;
+    height: 558px;
+    top: 226px;
+    left: 1072px;
+}
+
+.text {
+    color: #E83D32;
+    /* typography */
+    font-family: Agrandir Variable;
+    font-size: 32px;
+    font-weight: 336;
+    line-height: 38.4px;
+    letter-spacing: 0em;
+    text-align: left;
+}

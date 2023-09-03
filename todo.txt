@@ -1,21 +1,28 @@
 Group tasks:
 
-- JS handling:
-> resizing the browser causes elements to offset that cause jank, so elements aren't exactly placed
+- CSS file parsing
+> (done) add position: absolute
+> fix 'example-1/desktop.css' not parsing
 
 - fonts / text:
 > (done) line height issues on scaling
 > add support for min/max font size scaling
-> convert Figma's "Vertical trim Cap height" into CSS
+> convert Figma's "Vertical trim Cap height" into CSS (is this related to line height?)
 
 - boxes
 > add support to auto-scale the font size to fit text within a fixed width & fixed height box
 > add support for 'push' method (up, down, left, right) if text content is is too big for container & runs over: this would push all other surrounding content so that longer text fits / other surrounding elements can accommodate the extra space needed
 
 - images
-> (done) need to auto add in some CSS props as Figma does not export this
+> need to auto add in some CSS props as Figma does not export this:
+element.style.position = 'absolute'
+element.style.backgroundSize = 'cover'
+element.style.backgroundRepeat = 'no-repeat'
+element.style.backgroundPosition = 'center center'
 
 - list items
+
+- grids
 
 
 Notes:

@@ -1,133 +1,143 @@
 #container {
-    width: 378px;
-    height: 974px;
-    background-color: #F8F6F4;
+  width: 378px;
+  height: 974px;
+  background-color: #F8F6F4;
+  position: absolute;
 }
 
 #letters {
-    /* layout */
-    width: 280px;
-    height: 151px;
-    top: 131px;
-    left: 10px;
-    /* typography */
-    color: #162C63;
-    font-feature-settings: 'salt' on;
-    font-family: Agrandir Variable;
-    font-size: 216px;
-    font-style: normal;
-    font-weight: 469;
-    /* line-height: 60.665px; */
-    text-transform: uppercase;
-    /* other */
-    z-index: 1;
-    /* overrides */
-    line-height: 0.8;
+  /* layout */
+  width: calc(280px * var(--dynamicContainerRatio));
+  height: calc(151px * var(--dynamicContainerRatio));
+  top: calc(131px * var(--dynamicContainerRatio));
+  left: calc(10px * var(--dynamicContainerRatio));
+  /* typography */
+  color: #162C63;
+  font-feature-settings: 'salt' on;
+  font-family: Agrandir Variable;
+  font-size: 216px;
+  font-style: normal;
+  font-weight: 469;
+  /* line-height: 60.665px; */
+  text-transform: uppercase;
+  /* other */
+  z-index: 1;
+  /* overrides */
+  line-height: 0.8;
+  position: absolute;
 }
 
 #box-1 {
-    background-color: #2051FF;
-    /* layout */
-    width: 378px;
-    height: 378px;
-    top: 183px;
-    left: 0px;
+  background-color: #2051FF;
+  /* layout */
+  width: calc(378px * var(--dynamicContainerRatio));
+  height: calc(378px * var(--dynamicContainerRatio));
+  top: calc(183px * var(--dynamicContainerRatio));
+  left: calc(0px * var(--dynamicContainerRatio));
+  position: absolute;
 }
 
 #box-2 {
-    /* layout */
-    width: 235.3px;
-    height: 234.03px;
-    top: 561px;
-    left: 0px;
-    /* colours */
-    background-color: #bdaaaa;
+  /* layout */
+  width: calc(235.3px * var(--dynamicContainerRatio));
+  height: calc(234.03px * var(--dynamicContainerRatio));
+  top: calc(561px * var(--dynamicContainerRatio));
+  left: calc(0px * var(--dynamicContainerRatio));
+  /* colours */
+  background-color: #bdaaaa;
+  position: absolute;
 }
 
 #box-3 {
-    /* colours */
-    background-color: #E83D32;
-    /* layout */
-    width: 143px;
-    height: 143px;
-    top: 561px;
-    left: 235px;
+  /* colours */
+  background-color: #E83D32;
+  /* layout */
+  width: calc(143px * var(--dynamicContainerRatio));
+  height: calc(143px * var(--dynamicContainerRatio));
+  top: calc(561px * var(--dynamicContainerRatio));
+  left: calc(235px * var(--dynamicContainerRatio));
+  position: absolute;
 }
 
 #title {
-    /* typography */
-    color: #FFF;
-    font-family: Agrandir Variable;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19.12px;
-    letter-spacing: 5.6px;
-    text-transform: uppercase;
-    /* layout */
-    width: 250px;
-    height: 22px;
-    top: 156px;
-    left: 24px;
+  /* typography */
+  color: #FFF;
+  font-family: Agrandir Variable;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.12px;
+  letter-spacing: 5.6px;
+  text-transform: uppercase;
+  /* layout */
+  width: calc(250px * var(--dynamicContainerRatio));
+  height: calc(22px * var(--dynamicContainerRatio));
+  top: calc(156px * var(--dynamicContainerRatio));
+  left: calc(24px * var(--dynamicContainerRatio));
+  position: absolute;
 }
 
 #description {
-    /* typography */
-    color: #FFF;
-    font-family: Agrandir Variable;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 336;
-    /* line-height: 32px; */
-    /* layout */
-    width: 322.19px;
-    height: 160px;
-    top: 199px;
-    left: 24px;
-    /* overrides */
-    line-height: 1.3;
+  /* typography */
+  color: #FFF;
+  font-family: Agrandir Variable;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 336;
+  /* line-height: 32px; */
+  /* layout */
+  width: calc(322.19px * var(--dynamicContainerRatio));
+  height: calc(160px * var(--dynamicContainerRatio));
+  top: calc(199px * var(--dynamicContainerRatio));
+  left: calc(24px * var(--dynamicContainerRatio));
+  /* overrides */
+  line-height: 1.3;
+  position: absolute;
 }
 
 #cta-text {
-    /* typography */
-    color: #162C63;
-    font-family: Agrandir Variable;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 336;
-    line-height: 160%;
-    /* layout */
-    width: 325px;
-    height: 78px;
-    top: 819px;
-    left: 24px;
+  /* typography */
+  color: #162C63;
+  font-family: Agrandir Variable;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 336;
+  line-height: 160%;
+  /* layout */
+  width: calc(325px * var(--dynamicContainerRatio));
+  height: calc(78px * var(--dynamicContainerRatio));
+  top: calc(819px * var(--dynamicContainerRatio));
+  left: calc(24px * var(--dynamicContainerRatio));
+  position: absolute;
 }
 
 #cta-link {
-    /* layout */
-    width: 81px;
-    height: 4px;
-    flex-shrink: 0;
-    top: 942px;
-    left: 146px;
-    /* style */
-    border-radius: 4px;
-    background: #E83D32;
+  /* layout */
+  width: calc(81px * var(--dynamicContainerRatio));
+  height: calc(4px * var(--dynamicContainerRatio));
+  flex-shrink: 0;
+  top: calc(942px * var(--dynamicContainerRatio));
+  left: calc(146px * var(--dynamicContainerRatio));
+  /* style */
+  border-radius: 4px;
+  background: #E83D32;
+  position: absolute;
 }
 
 #cta-link-text {
-    /* typography */
-    color: #162C63;
-    font-feature-settings: 'salt' on;
-    font-family: Agrandir Variable;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 336;
-    line-height: 16px;
-    /* 100% */
-    /* layout */
-    width: 96px;
-    height: 16px;
-    top: 937px;
-    left: 253px;
+  /* typography */
+  color: #162C63;
+  font-feature-settings: 'salt' on;
+  font-family: Agrandir Variable;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 336;
+  line-height: 16px;
+  /* 100% */
+  /* layout */
+  width: calc(96px * var(--dynamicContainerRatio));
+  height: calc(16px * var(--dynamicContainerRatio));
+  top: calc(937px * var(--dynamicContainerRatio));
+  left: calc(253px * var(--dynamicContainerRatio));
+  position: absolute;
 }

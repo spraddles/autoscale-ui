@@ -5,11 +5,13 @@
     "description": "Auto scale elements in relation to each other",
     "private": true,
     "scripts": {
-        "typescript": "tsc src/scaleElements.tsx"
+        "typescript": "tsc src/scaleElements.tsx",
+        "parseCss": "node ./src/parseCss.js"
     },
-    "type": "commonjs",
+    "type": "module",
     "dependencies": {
         "@types/node": "^20.5.7",
+        "css": "^3.0.0",
         "ts-node": "^10.9.1",
         "typescript": "^5.2.2"
     }

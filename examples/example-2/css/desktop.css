@@ -1,31 +1,35 @@
 #container {
-    width: 1804px;
-    height: 1017px;
-    background: #EFEBE5;
+  width: 1804px;
+  height: 1017px;
+  background: #EFEBE5;
+  position: absolute;
 }
 
 #image {
-    width: 859px;
-    height: 871px;
-    top: 139px;
-    left: 122px;
-    background-image: url('./../images/image-1.png');
+  width: calc(859px * var(--dynamicContainerRatio));
+  height: calc(871px * var(--dynamicContainerRatio));
+  top: calc(139px * var(--dynamicContainerRatio));
+  left: calc(122px * var(--dynamicContainerRatio));
+  background-image: url('./../images/image-1.png');
+  position: absolute;
 }
 
 #text-container {
-    width: 577px;
-    height: 558px;
-    top: 226px;
-    left: 1072px;
+  width: calc(577px * var(--dynamicContainerRatio));
+  height: calc(558px * var(--dynamicContainerRatio));
+  top: calc(226px * var(--dynamicContainerRatio));
+  left: calc(1072px * var(--dynamicContainerRatio));
+  position: absolute;
 }
 
 .text {
-    color: #E83D32;
-    /* typography */
-    font-family: Agrandir Variable;
-    font-size: 32px;
-    font-weight: 336;
-    line-height: 38.4px;
-    letter-spacing: 0em;
-    text-align: left;
+  color: #E83D32;
+  /* typography */
+  font-family: Agrandir Variable;
+  font-size: 32px;
+  font-weight: 336;
+  line-height: 38.4px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: absolute;
 }

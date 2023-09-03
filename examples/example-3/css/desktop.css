@@ -1,26 +1,27 @@
 #container {
-    width: 1804px;
-    height: 699.2px;
-    background: #EFEBE5;
+  width: 1804px;
+  height: 699.2px;
+  background: #EFEBE5;
+  position: absolute;
 }
 
 #text-box {
-    /* position */
-    top: 58px;
-    left: 654px;
-    width: 496px;
-    height: 22px;
+  /* position */
+  top: calc(58px * var(--dynamicContainerRatio));
+  left: calc(654px * var(--dynamicContainerRatio));
+  width: calc(496px * var(--dynamicContainerRatio));
+  height: calc(22px * var(--dynamicContainerRatio));
+  position: absolute;
 }
 
 #text {
-    /* typography */
-    font-family: Avenir;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.4em;
-    text-align: center;
-    color:  #162C63;
+  /* typography */
+  font-family: Avenir;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.4em;
+  text-align: center;
+  color: #162C63;
+  position: absolute;
 }
-
-
