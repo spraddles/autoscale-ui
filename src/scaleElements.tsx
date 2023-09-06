@@ -42,6 +42,7 @@ const scaleElements = (config: Config) => {
   window.onload = function() {
     if(document.readyState == 'complete') {
       initialise()
+      setContainer()
     }
   }
 

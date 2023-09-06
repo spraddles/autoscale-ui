@@ -17,10 +17,10 @@
 #text {
   /* typography */
   font-family: Avenir;
-  font-size: 14px;
+  font-size: calc(14px * var(--ratio));
   font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.4em;
+  line-height: calc(22px * var(--ratio));
+  letter-spacing: calc(0.4em * var(--ratio));
   text-align: center;
   color: #162C63;
   position: absolute;

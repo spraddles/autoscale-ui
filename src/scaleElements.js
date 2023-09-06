@@ -31,6 +31,7 @@ var scaleElements = function (config) {
     window.onload = function () {
         if (document.readyState == 'complete') {
             initialise();
+            setContainer();
         }
     };
     // run on each window resize
