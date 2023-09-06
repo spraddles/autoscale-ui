@@ -5,17 +5,13 @@ const setDynamicRatio = (declaration) => {
     declaration.value = `calc(${declaration.value} * var(--ratio))`
 }
 
-const addPositionAbsolute = (declarations) => {
-    const addDeclarations = [
-        {
-            type: 'declaration',
-            property: 'position',
-            value: 'absolute'
-        }
-    ]
-    addDeclarations.forEach((declaration) => {
-        declarations.push(declaration)
-    })
+const addPositionAbsolute = (array) => {
+    const declaration = {
+        type: 'declaration',
+        property: 'position',
+        value: 'absolute'
+    }
+    array.declarations.push(declaration)
 }
 
 const addImageDeclarations = (declarations) => {
@@ -69,12 +65,10 @@ folders.forEach((folder) => {
                 }
 
                 // add position absolute
-                const absoluteDeclaration = {
-                    type: 'declaration',
-                    property: 'position',
-                    value: 'absolute'
-                }
-                rules[ruleIndex].declarations.push(absoluteDeclaration)
+                addPositionAbsolute(rules[ruleIndex])
+
+                // remove position absolute
+                var deleteAbsolute = false
 
                 var declarations = rule.declarations
                 declarations.forEach((declaration, declarationIndex) => {
@@ -98,12 +92,14 @@ folders.forEach((folder) => {
                         addImageDeclarations(declarations)
                     }
 
-                    // remove absolute position for text
-                    const fontPropsArray = ['font-size', 'line-height']
+                    // remove absolute position for text elements
+                    const fontPropsArray = ['font-size', 'line-height', 'font-family']
                     const fontProps = fontPropsArray.includes(declaration.property) && !isContainer
                     if (fontProps) {
-                        console.log(rules[ruleIndex])
-                        // addPositionAbsolute(declarations)
+                        deleteAbsolute = true
+                    }
+                    if (declaration.property == 'position' && deleteAbsolute) {
+                        declarations.splice(declarationIndex, 1)
                     }
                 })
             })
@@ -119,11 +115,11 @@ folders.forEach((folder) => {
                             selectors: [ '#text' ],
                             declarations: [
                                 {
-                                    type: 'declaration', 
-                                    property: 'font-family',position: [Position] 
+                                    type: 'declaration',
+                                    property: 'font-size',
+                                    value: '22px'
                                 }
                             ],
-                            position: Position { start: [Object], end: [Object], source: undefined }
                         }
                     ] */
                     parsingErrors: []

@@ -34,5 +34,4 @@
   line-height: calc(38.4px * var(--ratio));
   letter-spacing: calc(0em * var(--ratio));
   text-align: left;
-  position: absolute;
 }

@@ -1,7 +1,7 @@
 Group tasks:
 
 - CSS file parsing
-> fix incorrect position:absolute parsing
+> update fontPropsArray to check every item in array, not any
 
 - fonts / text:
 > add support for min/max font size scaling
