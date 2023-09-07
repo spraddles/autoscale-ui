@@ -26,6 +26,7 @@
   z-index: 1;
   /* overrides */
   line-height: calc(0.9 * var(--ratio));
+  position: absolute;
 }
 
 #box-1 {
@@ -79,6 +80,7 @@
   height: calc(22px * var(--ratio));
   top: calc(378px * var(--ratio));
   left: calc(30px * var(--ratio));
+  position: absolute;
 }
 
 #description {
@@ -94,6 +96,7 @@
   height: calc(152px * var(--ratio));
   top: calc(408px * var(--ratio));
   left: calc(30px * var(--ratio));
+  position: absolute;
 }
 
 #cta-text {
@@ -110,6 +113,7 @@
   height: calc(78px * var(--ratio));
   top: calc(751px * var(--ratio));
   left: calc(1377px * var(--ratio));
+  position: absolute;
 }
 
 #cta-link {
@@ -140,4 +144,9 @@
   height: calc(16px * var(--ratio));
   top: calc(851px * var(--ratio));
   left: calc(1484px * var(--ratio));
+  position: absolute;
+}
+
+p {
+  position: relative !important;
 }

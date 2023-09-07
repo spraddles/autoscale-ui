@@ -37,6 +37,19 @@ const addImageDeclarations = (declarations) => {
     })
 }
 
+const addPtagRule = (rules) => {
+    const rule = {
+        type: 'rule',
+        selectors: ['p'],
+        declarations: [{
+            type: 'declaration',
+            property: 'position',
+            value: 'relative !important'
+        }]
+    }
+    rules.push(rule)
+}
+
 const folders = ['example-1', 'example-2', 'example-3']
 
 folders.forEach((folder) => {
@@ -56,6 +69,9 @@ folders.forEach((folder) => {
             var object = css.parse(fileContents, options)
             var rules = object.stylesheet.rules
 
+            // add P tag rule
+            addPtagRule(rules)
+
             rules.forEach((rule, ruleIndex) => {
 
                 // don't apply dynamic var to container
@@ -67,11 +83,19 @@ folders.forEach((folder) => {
                 // add position absolute
                 addPositionAbsolute(rules[ruleIndex])
 
-                // remove position absolute
-                var deleteAbsolute = false
-
+                // change position absolute for P tags
+                var isPtag = false
+                if(rule.selectors[0] == [ 'p' ]) {
+                    isPtag = true
+                }
+                
                 var declarations = rule.declarations
                 declarations.forEach((declaration, declarationIndex) => {
+
+                    // change for P tags
+                    if(isPtag && declaration.property == 'position' && declaration.value == 'absolute') {
+                        declarations.splice(declarationIndex, 1)
+                    }
 
                     // set dynamic ratio for these CSS props:
                     const allPropsArray = [
@@ -90,16 +114,6 @@ folders.forEach((folder) => {
                     const imageProps = declaration.type == 'declaration' && imagePropsArray.includes(declaration.property) && !isContainer
                     if(imageProps) {
                         addImageDeclarations(declarations)
-                    }
-
-                    // remove absolute position for text elements
-                    const fontPropsArray = ['font-size', 'line-height', 'font-family']
-                    const fontProps = fontPropsArray.includes(declaration.property) && !isContainer
-                    if (fontProps) {
-                        deleteAbsolute = true
-                    }
-                    if (declaration.property == 'position' && deleteAbsolute) {
-                        declarations.splice(declarationIndex, 1)
                     }
                 })
             })

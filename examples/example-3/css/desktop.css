@@ -23,4 +23,9 @@
   letter-spacing: calc(0.4em * var(--ratio));
   text-align: center;
   color: #162C63;
+  position: absolute;
+}
+
+p {
+  position: relative !important;
 }
