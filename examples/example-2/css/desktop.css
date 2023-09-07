@@ -29,7 +29,7 @@
   color: #E83D32;
   /* typography */
   font-family: Agrandir Variable;
-  font-size: calc(32px * var(--ratio));
+  font-size: clamp(calc(32px / var(--fontSizeFactor)), calc(32px * var(--ratio)), calc(32px * var(--fontSizeFactor)));
   font-weight: 336;
   line-height: calc(38.4px * var(--ratio));
   letter-spacing: calc(0em * var(--ratio));

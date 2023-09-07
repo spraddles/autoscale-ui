@@ -17,7 +17,7 @@
   text-edge: cap;
   font-feature-settings: 'salt' on;
   font-family: Agrandir Variable;
-  font-size: calc(520px * var(--ratio));
+  font-size: clamp(calc(520px / var(--fontSizeFactor)), calc(520px * var(--ratio)), calc(520px * var(--fontSizeFactor)));
   font-style: normal;
   font-weight: 469;
   /* line-height: 1; */
@@ -69,7 +69,7 @@
   /* typography */
   color: #FFF;
   font-family: Agrandir Variable;
-  font-size: calc(14px * var(--ratio));
+  font-size: clamp(calc(14px / var(--fontSizeFactor)), calc(14px * var(--ratio)), calc(14px * var(--fontSizeFactor)));
   font-style: normal;
   font-weight: 400;
   line-height: calc(160% * var(--ratio));
@@ -87,7 +87,7 @@
   /* typography */
   color: #FFF;
   font-family: Agrandir Variable;
-  font-size: calc(32px * var(--ratio));
+  font-size: clamp(calc(32px / var(--fontSizeFactor)), calc(32px * var(--ratio)), calc(32px * var(--fontSizeFactor)));
   font-style: normal;
   font-weight: 336;
   line-height: calc(38.4px * var(--ratio));
@@ -103,7 +103,7 @@
   /* typography */
   color: #162C63;
   font-family: Agrandir Variable;
-  font-size: calc(16px * var(--ratio));
+  font-size: clamp(calc(16px / var(--fontSizeFactor)), calc(16px * var(--ratio)), calc(16px * var(--fontSizeFactor)));
   font-style: normal;
   font-weight: 336;
   line-height: calc(160% * var(--ratio));
@@ -134,7 +134,7 @@
   color: #162C63;
   font-feature-settings: 'salt' on;
   font-family: Agrandir Variable;
-  font-size: calc(16px * var(--ratio));
+  font-size: clamp(calc(16px / var(--fontSizeFactor)), calc(16px * var(--ratio)), calc(16px * var(--fontSizeFactor)));
   font-style: normal;
   font-weight: 336;
   line-height: calc(16px * var(--ratio));

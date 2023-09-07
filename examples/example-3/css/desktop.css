@@ -17,7 +17,7 @@
 #text {
   /* typography */
   font-family: Avenir;
-  font-size: calc(14px * var(--ratio));
+  font-size: clamp(calc(14px / var(--fontSizeFactor)), calc(14px * var(--ratio)), calc(14px * var(--fontSizeFactor)));
   font-weight: 400;
   line-height: calc(22px * var(--ratio));
   letter-spacing: calc(0.4em * var(--ratio));

@@ -1,8 +1,13 @@
 import css from 'css'
 import fs from 'fs'
 
-const setDynamicRatio = (declaration) => {
-    declaration.value = `calc(${declaration.value} * var(--ratio))`
+const setDynamicRatio = (declaration, option) => {
+    if(option == 1) {
+        declaration.value = `calc(${declaration.value} * var(--ratio))`
+    }
+    if(option == 2) {
+        declaration.value = `clamp(calc(${declaration.value} / var(--fontSizeFactor)), calc(${declaration.value} * var(--ratio)), calc(${declaration.value} * var(--fontSizeFactor)))`
+    }
 }
 
 const addPositionAbsolute = (array) => {
@@ -102,11 +107,18 @@ folders.forEach((folder) => {
                         // positions
                         'top', 'left', 'width', 'height',
                         // fonts
-                        'font-size', 'line-height', 'letter-spacing'
+                        'line-height', 'letter-spacing'
                     ]
                     const allProps = declaration.type == 'declaration' && allPropsArray.includes(declaration.property) && !isContainer
                     if (allProps) {
-                        setDynamicRatio(declaration)
+                        setDynamicRatio(declaration, 1)
+                    }
+
+                    // set min max font sizes:
+                    const textPropsArray = ['font-size']
+                    const textProps = declaration.type == 'declaration' && textPropsArray.includes(declaration.property) && !isContainer
+                    if (textProps) {
+                        setDynamicRatio(declaration, 2)
                     }
 
                     // add background image rules

@@ -1,28 +1,28 @@
 Group tasks:
 
-- CSS file parsing
-> update fontPropsArray to check every item in array, not any
+- complete image grid example
+
+- CSS file parsing:
 
 - fonts / text:
-> add support for min/max font size scaling
 
-- boxes
+- boxes:
 > add support to auto-scale the font size to fit text within a fixed width & fixed height box
 > add support for 'push' method (up, down, left, right) if text content is is too big for container & runs over: this would push all other surrounding content so that longer text fits / other surrounding elements can accommodate the extra space needed
 
 -auto-identify element type by CSS props
 (e.g. if 'font-size' or 'text-align' then its text!)
 
-- images
+- images:
 
-- list items
+- list items:
 
-- grids
+- grids:
 
 
 Notes:
 - example 1: boxes & text (no images)
-- example 2: images & text
+- example 2: image & text
 - example 3: image grid
 
 Usage notes:
