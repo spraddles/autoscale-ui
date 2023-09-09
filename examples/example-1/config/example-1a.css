@@ -1,0 +1,241 @@
+
+            #container {
+                /* position */
+                position: absolute;
+                
+                
+                /* dimensions */
+                width: 1804px;
+                height: 1000px;
+                /* colors */
+                
+                background-color: var(--beige-100, #EFEBE5);
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        
+            #text-1 {
+                /* position */
+                position: absolute;
+                top: 147px;
+                left: 171px;
+                /* dimensions */
+                width: 673px;
+                height: 364px;
+                /* colors */
+                color: #162C63;
+                
+                /* typography */
+                font-family: Agrandir Variable;
+                font-size: 520px;
+                font-weight: 469;
+                line-height: 0px;
+                letter-spacing: 0em;
+                
+                /* borders */
+                
+                /* transform */
+                text-transform: uppercase;
+            }
+        
+            #shape-1 {
+                /* position */
+                position: absolute;
+                top: 237px;
+                left: 306px;
+                /* dimensions */
+                width: 596px;
+                height: 596px;
+                /* colors */
+                
+                background-color: #2051FF;
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        
+            #text-2 {
+                /* position */
+                position: absolute;
+                top: 615px;
+                left: 336px;
+                /* dimensions */
+                width: 250px;
+                height: 22px;
+                /* colors */
+                color: #FFFFFF;
+                
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        
+            #text-3 {
+                /* position */
+                position: absolute;
+                top: 408px;
+                left: 30px;
+                /* dimensions */
+                width: 508px;
+                height: 152px;
+                /* colors */
+                color: #FFFFFF;
+                
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        
+            #shape-2 {
+                /* position */
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                /* dimensions */
+                width: 371px;
+                height: 369px;
+                /* colors */
+                
+                
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        
+            #shape-3 {
+                /* position */
+                position: absolute;
+                top: 0px;
+                left: 370px;
+                /* dimensions */
+                width: 226px;
+                height: 226px;
+                /* colors */
+                
+                
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        
+            #text-4 {
+                /* position */
+                position: absolute;
+                top: 288px;
+                left: 475px;
+                /* dimensions */
+                width: 271px;
+                height: 78px;
+                /* colors */
+                color: #162C63;
+                
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        
+            #shape-4 {
+                /* position */
+                position: absolute;
+                top: 4px;
+                left: 0px;
+                /* dimensions */
+                width: 81px;
+                height: 4px;
+                /* colors */
+                
+                background-color: #E83D32;
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                border-radius: 4px;
+                /* transform */
+                
+            }
+        
+            #text-5 {
+                /* position */
+                position: absolute;
+                top: 0px;
+                left: 107px;
+                /* dimensions */
+                width: 96px;
+                height: 16px;
+                /* colors */
+                color: #162C63;
+                
+                /* typography */
+                
+                
+                
+                
+                
+                
+                /* borders */
+                
+                /* transform */
+                
+            }
+        

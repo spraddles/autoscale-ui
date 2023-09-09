@@ -1,0 +1,211 @@
+{
+    "elements": [
+        {
+            "name": "container",
+            "isMain": true,
+            "style": {
+                "dimensions": {
+                    "width": "1804px",
+                    "height": "1000px"
+                },
+                "colors": {
+                    "background-color": "var(--beige-100, #EFEBE5)"
+                }
+            }
+        },
+        {
+            "name": "text-1",
+            "isText": true,
+            "textContent": "aB",
+            "style": {
+                "position": {
+                    "top": "147px",
+                    "left": "171px"
+                },
+                "dimensions": {
+                    "width": "673px",
+                    "height": "364px"
+                },
+                "colors": {
+                    "color": "#162C63"
+                },
+                "typography": {
+                    "font-family": "Agrandir Variable",
+                    "font-size": "520px",
+                    "font-weight": "469",
+                    "letter-spacing": "0em",
+                    "text-align": "left",
+                    "line-height": "0px"
+                },
+                "transform": {
+                    "text-transform": "uppercase"
+                }
+            }
+        },
+        {
+            "name": "shape-1",
+            "style": {
+                "position": {
+                    "top": "237px",
+                    "left": "306px"
+                },
+                "dimensions": {
+                    "width": "596px",
+                    "height": "596px"
+                },
+                "colors": {
+                    "background-color": "#2051FF"
+                }
+            }            
+        },
+        {
+            "name": "text-2",
+            "isText": true,
+            "textContent": "Introduction",
+            "style": {
+                "position": {
+                    "top": "615px",
+                    "left": "336px"
+                },
+                "dimensions": {
+                    "width": "250px",
+                    "height": "22px"
+                },
+                "colors": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "typography": {
+                "font-family": "Agrandir",
+                "font-size": "14px",
+                "font-weight": "400",
+                "line-height": "22px",
+                "letter-spacing": "0.4em",
+                "text-align": "left"
+            }
+        },
+        {
+            "name": "text-3",
+            "isText": true,
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum.",
+            "style": {
+                "position": {
+                    "top": "408px",
+                    "left": "30px"
+                },
+                "dimensions": {
+                    "width": "508px",
+                    "height": "152px"
+                },
+                "colors": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "typography": {
+                "font-family": "Agrandir Variable",
+                "font-size": "32px",
+                "font-weight": "336",
+                "line-height": "38px",
+                "letter-spacing": "0em",
+                "text-align": "left"
+            }
+        },
+        {
+            "name": "shape-2",
+            "style": {
+                "position": {
+                    "top": "0px",
+                    "left": "0px"
+                },
+                "dimensions": {
+                    "width": "371px",
+                    "height": "369px"
+                }
+            }            
+        },
+        {
+            "name": "shape-3",
+            "style": {
+                "position": {
+                    "top": "0px",
+                    "left": "370px"
+                },
+                "dimensions": {
+                    "width": "226px",
+                    "height": "226px"
+                }
+            }            
+        },
+        {
+            "name": "text-4",
+            "isText": true,
+            "textContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia lacinia ipsum, a congue.",
+            "style": {
+                "position": {
+                    "top": "288px",
+                    "left": "475px"
+                },
+                "dimensions": {
+                    "width": "271px",
+                    "height": "78px"
+                },
+                "colors": {
+                    "color": "#162C63"
+                }
+            },
+            "typography": {
+                "font-family": "Agrandir Variable",
+                "font-size": "16px",
+                "font-weight": "336",
+                "line-height": "26px",
+                "letter-spacing": "0em",
+                "text-align": "left"
+            }
+        },
+        {
+            "name": "shape-4",
+            "style": {
+                "position": {
+                    "top": "4px",
+                    "left": "0px"
+                },
+                "dimensions": {
+                    "width": "81px",
+                    "height": "4px"
+                },
+                "colors": {
+                    "background-color": "#E83D32"
+                },
+                "borders": {
+                    "border-radius": "4px"
+                }
+            }            
+        },
+        {
+            "name": "text-5",
+            "isText": true,
+            "textContent": "Click here",
+            "style": {
+                "position": {
+                    "top": "0px",
+                    "left": "107px"
+                },
+                "dimensions": {
+                    "width": "96px",
+                    "height": "16px"
+                },
+                "colors": {
+                    "color": "#162C63"
+                }
+            },
+            "typography": {
+                "font-family": "Agrandir Variable",
+                "font-size": "16px",
+                "font-weight": "336",
+                "line-height": "16px",
+                "letter-spacing": "0em",
+                "text-align": "left"
+            }
+        }
+    ]
+}

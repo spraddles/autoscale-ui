@@ -6,7 +6,8 @@
     "private": true,
     "scripts": {
         "typescript": "tsc src/scaleElements.tsx",
-        "parseCss": "node ./src/parseCss.js"
+        "parseCss": "node ./src/parseCss.js",
+        "json2html": "node ./src/json2html.js"
     },
     "type": "module",
     "dependencies": {

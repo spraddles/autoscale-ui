@@ -1,29 +1,37 @@
-Group tasks:
-
-- complete image grid example
-
-- CSS file parsing:
-
-- fonts / text:
-
-- boxes:
-> add support to auto-scale the font size to fit text within a fixed width & fixed height box
-> add support for 'push' method (up, down, left, right) if text content is is too big for container & runs over: this would push all other surrounding content so that longer text fits / other surrounding elements can accommodate the extra space needed
-
--auto-identify element type by CSS props
-(e.g. if 'font-size' or 'text-align' then its text!)
-
-- images:
-
-- list items:
-
-- grids:
+Issues:
+-some nodes dont have postion info (shape-2, shape-3)
 
 
-Notes:
+
+
+
+Examples:
 - example 1: boxes & text (no images)
 - example 2: image & text
 - example 3: image grid
 
-Usage notes:
-- text elements need a text box parent
+
+
+
+Figma notes:
+-on select of node, calculate the position values from the parent (container) [traverse up/down the nodelist to calculate values]
+
+-if Top or Left values are missing, traverse up the nodelist to get the missing value from the nearest parent
+
+-on rearranging the nodes visually, the position values can be recalculated
+-(then in UI if child is moved into a parent then recalculate position values)
+-auto determine z-index by node position in nodesArray
+-if shape doens't have color traverse down nodelist until nearest color is found (use this color)
+-auto name elements based on node info
+-auto-identify element type by CSS props (e.g. if 'font-size' or 'text-align' then its text!)
+-P tags need a text box container parent
+- boxes:
+> add support to auto-scale the font size to fit text within a fixed width & fixed height box
+> add support for 'push' method (up, down, left, right) if text content is is too big for container & runs over: this would push all other surrounding content so that longer text fits / other surrounding elements can accommodate the extra space needed
+-figma bug: text & shape colors: if text, then color. if shape, then background color (sometimes this gets mixed up)
+-line height in Figma doesn't work in some text (e.g. "AB")
+
+
+Notes:
+-in Figma "frames" are parents / group items
+-
