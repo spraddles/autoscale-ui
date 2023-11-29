@@ -22,8 +22,6 @@ Figma notes:
 -(then in UI if child is moved into a parent then recalculate position values)
 -auto determine z-index by node position in nodesArray
 -if shape doens't have color traverse down nodelist until nearest color is found (use this color)
--auto name elements based on node info
--auto-identify element type by CSS props (e.g. if 'font-size' or 'text-align' then its text!)
 -P tags need a text box container parent
 - boxes:
 > add support to auto-scale the font size to fit text within a fixed width & fixed height box
